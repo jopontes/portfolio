@@ -10,16 +10,16 @@ export default function BioPage() {
 
                     <div className="prose prose-lg text-stone-900 font-normal leading-relaxed">
                         <p className="mb-6">
-                            Jonatas Pontes is a production designer and art director based in São Paulo, Brazil.
-                            With a background in architecture and a passion for visual storytelling, he creates
-                            immersive environments for films, music videos, and large-scale events.
+                            Jonatas Pontes is a creative director and production designer with more than 16 years of experience. He is currently based in Europe and works across film, photography, stage design, and large scale visual projects.
                         </p>
                         <p className="mb-6">
-                            His work explores the relationship between space, light, and narrative, often
-                            pushing the boundaries of conventional set design to create kinetic and memorable experiences.
+                            With a background in architecture and urban planning, his work sits between creativity and structure. He focuses on visual storytelling that connects space, light, and narrative in a clear and meaningful way.
+                        </p>
+                        <p className="mb-6">
+                            Alongside his creative work, Jonatas has extensive experience as a production and content manager in the non profit sector. He has led teams, managed complex productions, and delivered visual content for global audiences, always balancing creative vision with practical execution.
                         </p>
                         <p>
-                            Available for freelance projects worldwide.
+                            He is available for freelance and collaborative projects worldwide.
                             <br />
                             <a href="mailto:contact@jonataspontes.com" className="text-black underline hover:no-underline mt-4 inline-block">
                                 contact@jonataspontes.com
