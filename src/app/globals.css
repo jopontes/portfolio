@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #E5E5E5;
+  /* Silver/Concrete default */
+  --foreground: #0a0a0a;
+  /* Black text */
+  --silver: #E5E5E5;
+  --concrete: #D4D4D4;
+  --black: #0a0a0a;
+  --accent: #2563eb;
+  /* Keep blue or change? Let's stick to monochrome for now as requested 'Silver/Black' */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #E5E5E5;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+  --font-display: var(--font-outfit);
+  --font-body: var(--font-inter);
+
+  --text-mega: 12rem;
+  --text-giga: 16rem;
+
+  --color-silver: var(--silver);
+  --color-concrete: var(--concrete);
+  --color-black: var(--black);
+
+  --animate-fade-in: fade-in 0.5s ease-out forwards;
+  --animate-slide-up: slide-up 0.5s ease-out forwards;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
