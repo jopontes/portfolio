@@ -1,31 +1,34 @@
 import { photos } from "@/data/photos";
-import { Gallery } from "@/components/Gallery";
-import { Section } from "@/components/Section";
+import { ProjectSlider } from "@/components/ProjectSlider";
 
 export default function PhotosPage() {
-    const galleryItems = photos.map((photo) => ({
+    const sliderItems = photos.map((photo) => ({
         id: photo.id,
         src: photo.coverImage,
         alt: photo.title,
         title: photo.title,
-        subtitle: "Photography Series",
+        description: photo.description,
         href: `/photos/${photo.slug}`,
     }));
 
     return (
-        <Section>
-            <div className="flex flex-col gap-8">
-                <div className="max-w-4xl">
-                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-bold mb-6 tracking-tighter uppercase leading-none text-stone-900">
+        <div className="min-h-screen bg-stone-50 text-stone-900 flex flex-col">
+            {/* Header / Nav Area Spacer if needed, or just padding */}
+            <div className="pt-24 md:pt-32 pb-8 px-6 md:px-12 flex justify-between items-end container mx-auto">
+                <div>
+                    <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tighter uppercase leading-none text-stone-900">
                         Photos
                     </h1>
-                    <p className="text-stone-400 text-lg md:text-xl leading-relaxed max-w-2xl font-light">
-                        A collection of visual experiments and photographic exercises I've been exploring over the last few years.
+                    <p className="text-stone-500 text-sm md:text-base mt-2 max-w-md font-light">
+                        A collection of visual experiments and photographic exercises.
                     </p>
                 </div>
-
-                <Gallery items={galleryItems} defaultLayout="grid" />
             </div>
-        </Section>
+
+            {/* Slider Content - Fills remaining space */}
+            <div className="flex-1 flex flex-col items-center justify-center pb-12">
+                <ProjectSlider items={sliderItems} />
+            </div>
+        </div>
     );
 }

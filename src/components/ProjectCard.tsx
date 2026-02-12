@@ -12,6 +12,7 @@ interface ProjectCardProps {
     href: string;
     layout?: "portrait" | "landscape" | "list";
     index?: number;
+    className?: string;
 }
 
 export function ProjectCard({
@@ -21,6 +22,7 @@ export function ProjectCard({
     href,
     layout = "portrait",
     index = 0,
+    className,
 }: ProjectCardProps) {
     if (layout === "list") {
         return (
@@ -29,6 +31,7 @@ export function ProjectCard({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
+                className={className}
             >
                 <Link href={href} className="group block relative border-t border-stone-300 py-12 md:py-16 transition-colors hover:bg-stone-200/50">
                     <div className="flex flex-col md:flex-row items-baseline justify-between gap-2 relative z-20 px-4">
@@ -66,9 +69,10 @@ export function ProjectCard({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
+            className={className}
         >
             {/* Changed default aspect ratio to video (landscape) as requested */}
-            <Link href={href} className={cn("group block relative overflow-hidden bg-stone-200 w-full", layout === "portrait" ? "aspect-[3/4]" : "aspect-video")}>
+            <Link href={href} className={cn("group block relative overflow-hidden bg-stone-900 w-full h-full", layout === "portrait" ? "aspect-[3/4]" : "aspect-video")}>
                 <Image
                     src={imageSrc}
                     alt={title}
