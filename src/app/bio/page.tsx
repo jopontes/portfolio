@@ -10,7 +10,7 @@ export default function BioPage() {
 
                     <div className="prose prose-lg text-stone-900 font-normal leading-relaxed">
                         <p className="mb-6">
-                            Jonatas Pontes is a creative director and production designer with more than 16 years of experience. He is currently based in Europe and works across film, photography, stage design, and large scale visual projects.
+                            Jonathas Pontes is a creative director and production designer with more than 16 years of experience. He is currently based in Europe and works across film, photography, stage design, and large scale visual projects.
                         </p>
                         <p className="mb-6">
                             With a background in architecture and urban planning, his work sits between creativity and structure. He focuses on visual storytelling that connects space, light, and narrative in a clear and meaningful way.
